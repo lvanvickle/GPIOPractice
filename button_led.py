@@ -7,6 +7,9 @@ GPIO.setmode(GPIO.BCM) # Use Broadcom pin numbering
 GPIO.setup(18, GPIO.OUT) # Set GPIO18 as output pin for LED
 GPIO.setup(13, GPIO.IN) # Set up GPIO13 as input pin for button
 
+# Ensure the LED is off before starting
+GPIO.output(18, GPIO.LOW) 
+
 try:
     while True:
         if(GPIO.input(13)):
